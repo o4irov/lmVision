@@ -9,6 +9,9 @@ services:
       - "443:443"
     volumes:
       - './nginx.conf:/etc/nginx/nginx.conf'
+      - /etc/letsencrypt/live/irkcam.ru:/etc/letsencrypt/live/irkcam.ru
+      - /etc/letsencrypt/archive/irkcam.ru:/etc/letsencrypt/archive/irkcam.ru
+      - /etc/letsencrypt/renewal/irkcam.ru.conf:/etc/letsencrypt/renewal/irkcam.ru.conf
     depends_on:
       - frontend
     networks:
