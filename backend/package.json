@@ -11,9 +11,9 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "body-parser": "^1.20.2",
+    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
-    "express": "^4.19.2",
+    "express": "^4.21.0",
     "lm_vision_backend": "file:",
     "morgan": "^1.10.0",
     "mysql2": "^3.10.1",
