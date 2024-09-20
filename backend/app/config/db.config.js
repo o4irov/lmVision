@@ -3,10 +3,10 @@ var Sequelize = require('sequelize');
 var init_models = require('../model/init_models');
 
 var dbProperties = {
-    database: 'lmVision', // название базы данных
-    username: 'root', // имя пользователя, для которого настроены права к базе данных, 'root' задаётся по умолчанию
-    password: '', // пароль пользователя, по умолчанию пароль пустой
-    host: 'localhost', // имя сервера, на котором расположена база данных
+    host: process.env.DB_HOST || 'localhost', // Значение по умолчанию — localhost
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME, // имя сервера, на котором расположена база данных
     dialect: 'mysql', // используемая СУБД
     pool: { // параметры соединения
         max: 5, // максимальное количество одновременно открытых соединений
