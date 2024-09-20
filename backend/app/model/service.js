@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
             unique: true,
             allowNull: false,
         },
-        cost: {
+        price: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
@@ -27,6 +27,9 @@ module.exports = (sequelize, DataTypes) => {
                 model: 'Service_type',
                 key: 'id',
             },
+        },
+        quantity: {
+            type: DataTypes.INTEGER,
         },
     });
 };
