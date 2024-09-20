@@ -3,7 +3,7 @@ let bodyParser = require('body-parser');
 let db = require('./app/config/db.config.js');
 let cors = require('cors');
 let morgan = require('morgan');
-let port = 3000;
+let port = 8000;
 var app = express();
 
 
@@ -18,7 +18,7 @@ app.use(morgan('combined'));
 db.sequelize.sync({ force: false });
 
 var corsOptions = {
-    origin: 'http://localhost:4200', // указываем, откуда будут приходить запросы
+    origin: 'http://localhost:3000', // указываем, откуда будут приходить запросы
     credentials: true, // разрешаем обрабатывать запросы
     optionSuccessStatus: 200 // при успешной обработке запроса будет возвращён статус 200
 }

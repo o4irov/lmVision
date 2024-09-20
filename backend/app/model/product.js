@@ -28,5 +28,8 @@ module.exports = (sequelize, DataTypes) => {
                 key: 'id',
             },
         },
+        quantity: {
+            type: DataTypes.INTEGER,
+        },
     });
 };

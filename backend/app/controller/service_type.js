@@ -3,7 +3,6 @@ var globalFunctions = require('../config/global.functions.js');
 var Service_type = db.serviceType; // название модели смотреть в init-models.js
 const { Sequelize } = require('sequelize');
 
-// Получение всех товаров
 exports.findAll = (req, res) => {
     Service_type.findAll()
         .then(objects => {
@@ -16,7 +15,6 @@ exports.findAll = (req, res) => {
 };
 
 
-// Получение данных товара по id
 exports.findById = (req, res) => {
     Service_type.findByPk(req.params.id)
         .then(object => {
