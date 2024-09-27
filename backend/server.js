@@ -18,7 +18,7 @@ app.use(morgan('combined'));
 db.sequelize.sync({ force: false });
 
 var corsOptions = {
-    origin: 'https://localhost:' + port, // указываем, откуда будут приходить запросы
+    origin: ['https://localhost:80', 'https://localhost:443'], // указываем, откуда будут приходить запросы
     credentials: true, // разрешаем обрабатывать запросы
     optionSuccessStatus: 200 // при успешной обработке запроса будет возвращён статус 200
 }
